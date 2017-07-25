@@ -1,0 +1,65 @@
+[33mcommit a50ee8a22d0a856d662bfb3bc8e06f476a4a4775[m
+Author: ZacPavilion <zacpavilion@localhost.localdomain>
+Date:   Wed Dec 28 06:44:21 2016 -0500
+
+    Finished basic functioning app, incorporating Heroku, Pandas, Quandl, Bokeh, and Flask.
+
+[33mcommit bd6e5bad2a2b456b0a921ac2f3df1a9058ab25c2[m
+Author: Zac <zacbullard@gmail.com>
+Date:   Sun Dec 25 00:52:29 2016 +0000
+
+    Added conda buildpack
+
+[33mcommit 26aaa6a02b608e0af24236a5dc35aa74570fcf48[m
+Author: Zac <zacbullard@gmail.com>
+Date:   Fri Dec 16 22:18:27 2016 +0000
+
+    Initial commit.
+
+[33mcommit 1e2735eabe80972427fbabdbb9d864ffe3f21b65[m
+Author: arielist <aritem@gmail.com>
+Date:   Fri Sep 18 15:07:13 2015 -0400
+
+    update bootstrap
+
+[33mcommit 01b9442e39ca4d9d3a605940c8f489837f8f5223[m
+Author: arielist <aritem@gmail.com>
+Date:   Wed Aug 26 14:41:16 2015 -0400
+
+    remove sub specifics to make repo generalizable
+
+[33mcommit 69f939448ff6cbbe64f77c6917a215469010fd92[m
+Author: arielist <aritem@gmail.com>
+Date:   Wed Aug 26 09:25:24 2015 -0400
+
+    add submission link
+
+[33mcommit ddbaf84cafa2ba9a8b23cdc2caa3dc4a7c9a7526[m
+Author: arielist <aritem@gmail.com>
+Date:   Tue Aug 18 09:47:09 2015 -0400
+
+    copy editing
+
+[33mcommit 79e0095f7fa3c120731202852f0e545e5118b0fb[m
+Author: arielist <aritem@gmail.com>
+Date:   Tue Aug 18 09:33:08 2015 -0400
+
+    add more refs to README
+
+[33mcommit 3e6fb96bb1acb437705cd001274106189e3ef26e[m
+Author: arielist <aritem@gmail.com>
+Date:   Mon Aug 17 20:08:50 2015 -0400
+
+    linkify stuff
+
+[33mcommit 70bab1a5513b27aa05209544fa6df1262deed423[m
+Author: arielist <aritem@gmail.com>
+Date:   Mon Aug 17 20:07:23 2015 -0400
+
+    flesh out README
+
+[33mcommit 6533babe04bd9c83d99a644624d25db7b18b3724[m
+Author: arielist <aritem@gmail.com>
+Date:   Mon Aug 17 19:34:46 2015 -0400
+
+    initial commit
