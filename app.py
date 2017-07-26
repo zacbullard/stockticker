@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, redirect
 from bokeh.plotting import figure, output_file, show
 from bokeh.embed import components 
 import requests, json, datetime, calendar, pandas as pd
+import bokeh
 app = Flask(__name__)
 
 #Quandl API Url
+localTesting = True
 QAPI1 = "https://www.quandl.com/api/v3/datasets/WIKI/"
 QAPI2 = ".json?column_index=4&end_date="
 QAPI3 = "&start_date="
@@ -16,7 +18,7 @@ def main():
 
 @app.route('/index')
 def index():
- 	return render_template('index.html')
+ 	return render_template('index.html', bokehVersion = bokeh.__version__)
 
 @app.route('/', methods=['POST'])
 def ticker_form_post():
@@ -51,6 +53,10 @@ def ticker_form_post():
     return render_template('graph.html', script=script, div=div)
 
 if __name__ == '__main__':
-	#app.run(host='0.0.0.0')
-	app.run(port=33507, debug=True) 
+    if localTesting:
+        #The following line is local testing of the server
+    	app.run(host='0.0.0.0')
+    else:
+        #The following line is for Heroku deployment.
+    	app.run(port=33507, debug=True) 
 	

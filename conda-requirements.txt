@@ -1,4 +1,4 @@
 scipy
 numpy
 pandas
-bokeh=0.12.2
+bokeh=0.12.3
