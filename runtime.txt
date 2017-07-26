@@ -1,3 +1,1 @@
-python 3.6.2
-# Previous python version: 
-# python-2.7.13
+python-2.7.13

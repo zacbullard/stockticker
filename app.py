@@ -6,7 +6,7 @@ import bokeh
 app = Flask(__name__)
 
 localTesting = False
-#Quandl API Url
+#Shorthand variables for the oft-used Quandl API Url
 QAPI1 = "https://www.quandl.com/api/v3/datasets/WIKI/"
 QAPI2 = ".json?column_index=4&end_date="
 QAPI3 = "&start_date="
@@ -25,6 +25,7 @@ def ticker_form_post():
     text = request.form['ticker_text']
     processed_text = text.upper()
     
+    #Finding the datetimes that correspond to the current time, and previous month.
     end_date = datetime.date.today()
     month = end_date.month - 1
     if month is 0:
@@ -32,8 +33,9 @@ def ticker_form_post():
     year = int(end_date.year - 1 / 12)
     day = min(end_date.day,calendar.monthrange(year,month)[1])
     start_date = datetime.date(year,month,day)
-    request_string = QAPI1 + processed_text + QAPI2 + end_date.strftime("%Y-%m-%d") + QAPI3 + start_date.strftime("%Y-%m-%d") + QAPI4
 
+    #API request
+    request_string = QAPI1 + processed_text + QAPI2 + end_date.strftime("%Y-%m-%d") + QAPI3 + start_date.strftime("%Y-%m-%d") + QAPI4
     r = requests.get(request_string)
     stock_dict = json.loads(r.text) #This makes a dictionary 
     df = pd.DataFrame(stock_dict["dataset"]["data"])
