@@ -5,8 +5,8 @@ import requests, json, datetime, calendar, pandas as pd
 import bokeh
 app = Flask(__name__)
 
+localTesting = False
 #Quandl API Url
-localTesting = True
 QAPI1 = "https://www.quandl.com/api/v3/datasets/WIKI/"
 QAPI2 = ".json?column_index=4&end_date="
 QAPI3 = "&start_date="
@@ -54,9 +54,8 @@ def ticker_form_post():
 
 if __name__ == '__main__':
     if localTesting:
-        #The following line is local testing of the server
     	app.run(host='0.0.0.0')
     else:
-        #The following line is for Heroku deployment.
+        #Port for deployment on Heroku
     	app.run(port=33507, debug=True) 
 	
