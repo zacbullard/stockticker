@@ -44,6 +44,7 @@ def ticker_form_post():
     p = figure(title="End of Day Prices, Via Quandl", x_axis_label='Date', y_axis_label='USD', x_axis_type="datetime")
 	# add a line renderer with legend and line thickness
     p.line(datetimes, df.loc[:,1].tolist(), legend=processed_text, line_width=2)
+    p.legend.location = "top_left"
   
     script, div = components(p)
 
